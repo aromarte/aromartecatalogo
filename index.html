@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de perfumes AromArte - Dama, Caballero y Ambientales">
+    <title>AromArte - Catálogo de Perfumes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🌸 AromArte</h1>
+            <p class="tagline">Catálogo de Perfumes Exclusivos</p>
+        </div>
+    </header>
+
+    <!-- Filtros y Búsqueda -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Buscar perfume, diseñador o categoría...">
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="todos">
+                    Todos <span class="count" id="count-todos">0</span>
+                </button>
+                <button class="filter-btn" data-filter="Dama">
+                    👗 Dama <span class="count" id="count-dama">0</span>
+                </button>
+                <button class="filter-btn" data-filter="Caballero">
+                    🕴️ Caballero <span class="count" id="count-caballero">0</span>
+                </button>
+                <button class="filter-btn" data-filter="Ambiental">
+                    🌿 Ambiental <span class="count" id="count-ambiental">0</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resultados -->
+    <section class="results-section">
+        <div class="container">
+            <div class="results-info">
+                <p id="resultsText">Mostrando <strong id="resultsCount">0</strong> perfumes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Productos -->
+    <main class="main-content">
+        <div class="container">
+            <div id="productsGrid" class="products-grid">
+                <!-- Los productos se cargarán dinámicamente aquí -->
+            </div>
+            
+            <div id="noResults" class="no-results" style="display: none;">
+                <div class="no-results-content">
+                    <span class="no-results-icon">😕</span>
+                    <h3>No se encontraron resultados</h3>
+                    <p>Intenta con otra búsqueda o filtro</p>
+                </div>
+            </div>
+            
+            <div id="loadingSpinner" class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Cargando perfumes...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AromArte. Catálogo de Perfumes</p>
+            <p class="footer-note">Todos los diseñadores y marcas son propiedad de sus respectivos dueños</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

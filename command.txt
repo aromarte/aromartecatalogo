@@ -1,0 +1,17 @@
+cd "C:\Users\eduar\OneDrive\Documentos\AromArte\AromArteWS"
+
+# 2. Inicializar Git (si no está inicializado)
+git init
+
+# 3. Agregar todos los archivos
+git add .
+
+# 4. Hacer el primer commit
+git commit -m "Catálogo AromArte: versión inicial con 150+ perfumes"
+
+# 5. Conectar con GitHub (tu repo ya existe)
+git remote add origin https://github.com/eduardoramirez94/aromartecatalogo.git
+
+# 6. Subir los archivos
+git branch -M main
+git push -u origin main
