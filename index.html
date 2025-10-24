@@ -11,8 +11,8 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <h1 class="logo">🌸 AromArte</h1>
-            <p class="tagline">Catálogo de Perfumes Exclusivos</p>
+            <!--h1 class="logo">🌸 AromArte</h1-->
+            <img src="/img/resources/Logotipo.png" alt="AromArte Logo" class="logo">
         </div>
     </header>
 
@@ -38,15 +38,14 @@
                 </button>
             </div>
         </div>
-    </section>
-
-    <!-- Resultados -->
-    <section class="results-section">
+        <!-- Resultados -->
+    <section class="results-section" style="display: none;">
         <div class="container">
             <div class="results-info">
                 <p id="resultsText">Mostrando <strong id="resultsCount">0</strong> perfumes</p>
             </div>
         </div>
+    </section>
     </section>
 
     <!-- Grid de Productos -->
@@ -80,5 +79,13 @@
     </footer>
 
     <script src="scripts.js"></script>
+</main>
+<!-- Modal para detalles de perfume (solo PC) -->
+<div id="perfumeModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="modal-close" id="modalCloseBtn">&times;</span>
+        <div id="modalPerfumeContent"><!-- Detalles dinámicos --></div>
+    </div>
+</div>
 </body>
 </html>

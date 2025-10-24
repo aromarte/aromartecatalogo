@@ -2,9 +2,10 @@
    VARIABLES Y RESET
    ======================================== */
 :root {
-    --primary-color: #d946ef;
-    --secondary-color: #a855f7;
-    --accent-color: #ec4899;
+    --primary-color: #7b4f9e;      /* Púrpura medio del logo */
+    --secondary-color: #3d1f5c;    /* Púrpura oscuro del logo */
+    --accent-color: #d4af37;       /* Dorado del atomizador */
+    --light-purple: #b39bc8;       /* Lavanda del tagline */
     --dark-bg: #1a1a2e;
     --light-bg: #f8f9fa;
     --card-bg: #ffffff;
@@ -14,6 +15,7 @@
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
     --transition: all 0.3s ease;
+    --header-background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
 }
 
 * {
@@ -39,15 +41,28 @@ body {
 /* ========================================
    HEADER
    ======================================== */
-.header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+header {
+    background-image: url('img/resources/Hojas verdes.png');
+    background-size: 120px;
+    background-repeat: repeat;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-blend-mode: overlay;
     color: white;
-    padding: 2rem 0;
+    padding: 1rem 0;  /* Reducido el padding */
     text-align: center;
     box-shadow: var(--shadow-lg);
     position: sticky;
     top: 0;
     z-index: 100;
+    display: flex;  /* Agregado */
+    align-items: center;  /* Agregado */
+    justify-content: center;  /* Agregado */
+}
+
+.header .container {
+    display: flex;  /* Agregado */
+    justify-content: center;  /* Agregado */
+    align-items: center;  /* Agregado */
 }
 
 .logo {
@@ -55,6 +70,35 @@ body {
     font-weight: 700;
     margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header .logo {
+    max-width: 200px;  /* Tamaño máximo en desktop */
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin: 0;  /* Elimina márgenes para ajustar mejor el header */
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .header {
+        padding: 0.75rem 0;  /* Reducido en móviles */
+    }
+    
+    .header .logo {
+        max-width: 150px;  /* Más pequeño en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0.5rem 0;  /* Aún más reducido */
+    }
+    
+    .header .logo {
+        max-width: 120px;  /* Aún más pequeño en pantallas muy pequeñas */
+    }
 }
 
 .tagline {
@@ -205,7 +249,7 @@ body {
 }
 
 .product-category.dama {
-    background: linear-gradient(135deg, #ec4899, #d946ef);
+    background: linear-gradient(135deg, #d946ef, #d946ef);
 }
 
 .product-category.caballero {
@@ -221,13 +265,21 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 1.5rem;
-    background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+    background: var(--card-bg);
     min-height: 220px;
 }
 
 .product-image {
     max-width: 45%;
-    height: auto;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.product-image-notas {
+    max-width: 45%;
+    height: 200px;
     object-fit: contain;
     border-radius: 8px;
     transition: var(--transition);
@@ -244,7 +296,7 @@ body {
 .product-name {
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
     line-height: 1.3;
 }
@@ -395,5 +447,72 @@ body {
 
     .logo {
         font-size: 1.8rem;
+    }
+}
+
+/* =============================
+   MODAL PERFUME (solo PC)
+   ============================= */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(30, 16, 46, 0.65);
+    justify-content: center;
+    align-items: center;
+    animation: fadeInModalBg 0.2s;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    margin: auto;
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 32px rgba(60, 30, 90, 0.25);
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    max-width: 480px;
+    width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: scaleInModal 0.25s;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 2;
+    transition: color 0.2s;
+}
+.modal-close:hover {
+    color: var(--accent-color);
+}
+
+@keyframes fadeInModalBg {
+    from { background: rgba(30, 16, 46, 0); }
+    to   { background: rgba(30, 16, 46, 0.65); }
+}
+@keyframes scaleInModal {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/* Solo mostrar modal en pantallas grandes (PC) */
+@media (max-width: 900px) {
+    .modal {
+        display: none !important;
     }
 }

@@ -15,3 +15,6 @@ git remote add origin https://github.com/eduardoramirez94/aromartecatalogo.git
 # 6. Subir los archivos
 git branch -M main
 git push -u origin main
+
+
+python -m http.server 8000

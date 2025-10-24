@@ -57,6 +57,15 @@ function parseCSV(text) {
         }
     }
 
+    // Ordenar primero por categoria (Dama, Caballero, Ambiental), luego por perfume (alfabético)
+    const categoriaOrden = { Dama: 0, Caballero: 1, Ambiental: 2 };
+    perfumes.sort((a, b) => {
+        const catA = categoriaOrden[a.categoria] ?? 99;
+        const catB = categoriaOrden[b.categoria] ?? 99;
+        if (catA !== catB) return catA - catB;
+        return a.perfume.localeCompare(b.perfume, 'es', { sensitivity: 'base' });
+    });
+
     return perfumes;
 }
 
@@ -100,27 +109,33 @@ function renderPerfumes(perfumes) {
 
     noResults.style.display = 'none';
     
-    grid.innerHTML = perfumes.map(perfume => createPerfumeCard(perfume)).join('');
+    grid.innerHTML = perfumes.map((perfume, idx) => createPerfumeCard(perfume, idx)).join('');
+
+    // Solo en PC: agregar eventos para abrir modal
+    if (window.innerWidth > 900) {
+        document.querySelectorAll('.product-card').forEach((card, idx) => {
+            card.addEventListener('click', () => openPerfumeModal(filteredPerfumes[idx]));
+        });
+    }
 }
 
-function createPerfumeCard(perfume) {
+function createPerfumeCard(perfume, idx) {
     const categoryClass = perfume.categoria.toLowerCase();
     const categoryIcon = getCategoryIcon(perfume.categoria);
-    
     return `
-        <div class="product-card" data-category="${perfume.categoria}">
+        <div class="product-card" data-category="${perfume.categoria}" data-idx="${idx}">
             <div class="product-category ${categoryClass}">
                 ${categoryIcon} ${perfume.categoria}
             </div>
             <div class="product-images">
-                <img src="img/${perfume.notas}" 
-                     alt="${perfume.perfume} - Notas" 
-                     class="product-image"
-                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3ENotas%3C/text%3E%3C/svg%3E'">
                 <img src="img/${perfume.envase}" 
                      alt="${perfume.perfume}" 
                      class="product-image"
-                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EEnvase%3C/text%3E%3C/svg%3E'">
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22/%3E%3Crect fill=%22%23f0f0f0%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EEnvase%3C/text%3E%3C/svg%3E'">    
+                <img src="img/${perfume.notas}" 
+                     alt="${perfume.perfume} - Notas" 
+                     class="product-image-notas"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3ENotas%3C/text%3E%3C/svg%3E'">
             </div>
             <div class="product-info">
                 <h3 class="product-name">${perfume.perfume}</h3>
@@ -129,6 +144,53 @@ function createPerfumeCard(perfume) {
             </div>
         </div>
     `;
+}
+
+// =============================
+// MODAL PERFUME (solo PC)
+// =============================
+function openPerfumeModal(perfume) {
+    const modal = document.getElementById('perfumeModal');
+    const content = document.getElementById('modalPerfumeContent');
+    if (!modal || !content) return;
+
+    // Construir el contenido del modal
+    content.innerHTML = `
+        <div style="text-align:center;">
+            <div style="margin-bottom:1rem;">
+                <img src="img/${perfume.envase}" alt="${perfume.perfume}" style="max-width:160px;max-height:160px;object-fit:contain;">
+            </div>
+            <div style="margin-bottom:1rem;">
+                <img src="img/${perfume.notas}" alt="${perfume.notas}" style="max-width:160px;max-height:160px;object-fit:contain;">
+            </div>
+            <h2 class="product-name">${perfume.perfume}</h2>
+            <div class="product-designer">${perfume.diseñador}</div>
+            <div style="margin-bottom:0.5rem;"><span class="product-label">${perfume.categoria}</span></div>
+            
+        </div>
+    `;
+    modal.classList.add('show');
+    modal.style.display = 'flex';
+
+    // Cerrar modal al hacer click en la X
+    document.getElementById('modalCloseBtn').onclick = closePerfumeModal;
+    // Cerrar modal al hacer click fuera del contenido
+    modal.onclick = function(e) {
+        if (e.target === modal) closePerfumeModal();
+    };
+    // Cerrar con ESC
+    document.onkeydown = function(e) {
+        if (e.key === 'Escape') closePerfumeModal();
+    };
+}
+
+function closePerfumeModal() {
+    const modal = document.getElementById('perfumeModal');
+    if (modal) {
+        modal.classList.remove('show');
+        modal.style.display = 'none';
+    }
+    document.onkeydown = null;
 }
 
 function getCategoryIcon(category) {
