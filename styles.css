@@ -30,6 +30,244 @@ body {
     color: var(--text-dark);
     background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Hojas flotantes con SVG en CSS */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    width: 20px;
+    height: 30px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 0 100% 0 100%;
+    opacity: 0.15;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body::before {
+    top: 10%;
+    left: 10%;
+    animation: floatLeaf1 15s ease-in-out infinite;
+}
+
+body::after {
+    top: 30%;
+    right: 15%;
+    animation: floatLeaf2 18s ease-in-out infinite 2s;
+}
+
+@keyframes floatLeaf1 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(100px, 50px) rotate(90deg);
+    }
+    50% {
+        transform: translate(50px, 120px) rotate(180deg);
+    }
+    75% {
+        transform: translate(-50px, 80px) rotate(270deg);
+    }
+}
+
+@keyframes floatLeaf2 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(-80px, 60px) rotate(-90deg);
+    }
+    50% {
+        transform: translate(-120px, 140px) rotate(-180deg);
+    }
+    75% {
+        transform: translate(60px, 100px) rotate(-270deg);
+    }
+}
+
+/* Más hojas flotantes */
+.container::before,
+.container::after,
+.main-content::before,
+.main-content::after,
+.filters-section::before,
+.filters-section::after,
+.results-section::before,
+.results-section::after,
+.products-grid::before,
+.products-grid::after,
+.footer::before,
+.footer::after,
+header::before {
+    content: '';
+    position: fixed;
+    width: 18px;
+    height: 28px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(5, 150, 105, 0.2) 100%);
+    border-radius: 0 100% 0 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container::before {
+    top: 60%;
+    left: 20%;
+    animation: floatLeaf3 20s ease-in-out infinite 4s;
+}
+
+.container::after {
+    top: 40%;
+    right: 25%;
+    animation: floatLeaf4 17s ease-in-out infinite 6s;
+}
+
+.main-content::before {
+    top: 70%;
+    left: 70%;
+    animation: floatLeaf5 22s ease-in-out infinite 3s;
+}
+
+.main-content::after {
+    top: 20%;
+    right: 40%;
+    animation: floatLeaf6 19s ease-in-out infinite 5s;
+}
+
+.filters-section::before {
+    top: 15%;
+    left: 50%;
+    animation: floatLeaf7 21s ease-in-out infinite 7s;
+}
+
+.filters-section::after {
+    top: 80%;
+    right: 10%;
+    animation: floatLeaf8 16s ease-in-out infinite 8s;
+}
+
+.results-section::before {
+    top: 50%;
+    left: 5%;
+    animation: floatLeaf9 24s ease-in-out infinite 2s;
+}
+
+.results-section::after {
+    top: 35%;
+    right: 60%;
+    animation: floatLeaf10 18s ease-in-out infinite 9s;
+}
+
+.products-grid::before {
+    top: 25%;
+    left: 80%;
+    animation: floatLeaf11 19s ease-in-out infinite 10s;
+}
+
+.products-grid::after {
+    top: 90%;
+    right: 50%;
+    animation: floatLeaf12 23s ease-in-out infinite 4s;
+}
+
+.footer::before {
+    top: 55%;
+    left: 35%;
+    animation: floatLeaf13 20s ease-in-out infinite 11s;
+}
+
+.footer::after {
+    top: 10%;
+    right: 70%;
+    animation: floatLeaf14 17s ease-in-out infinite 12s;
+}
+
+header::before {
+    top: 75%;
+    left: 90%;
+    animation: floatLeaf15 22s ease-in-out infinite 6s;
+}
+
+@keyframes floatLeaf3 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(80px, -50px) rotate(120deg); }
+    66% { transform: translate(-60px, 100px) rotate(240deg); }
+}
+
+@keyframes floatLeaf4 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(-90px, 70px) rotate(-120deg); }
+    66% { transform: translate(70px, -40px) rotate(-240deg); }
+}
+
+@keyframes floatLeaf5 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(60px, 80px) rotate(100deg); }
+    66% { transform: translate(-80px, -60px) rotate(200deg); }
+}
+
+@keyframes floatLeaf6 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(-70px, -70px) rotate(-110deg); }
+    66% { transform: translate(90px, 50px) rotate(-220deg); }
+}
+
+@keyframes floatLeaf7 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(100px, 60px) rotate(130deg); }
+    66% { transform: translate(-50px, -80px) rotate(260deg); }
+}
+
+@keyframes floatLeaf8 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(-60px, 90px) rotate(-100deg); }
+    66% { transform: translate(80px, -50px) rotate(-200deg); }
+}
+
+@keyframes floatLeaf9 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(70px, -60px) rotate(140deg); }
+    66% { transform: translate(-90px, 70px) rotate(280deg); }
+}
+
+@keyframes floatLeaf10 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(-80px, -50px) rotate(-130deg); }
+    66% { transform: translate(60px, 80px) rotate(-260deg); }
+}
+
+@keyframes floatLeaf11 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(50px, 70px) rotate(110deg); }
+    66% { transform: translate(-70px, -40px) rotate(220deg); }
+}
+
+@keyframes floatLeaf12 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(-100px, 50px) rotate(-140deg); }
+    66% { transform: translate(90px, -70px) rotate(-280deg); }
+}
+
+@keyframes floatLeaf13 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(85px, -55px) rotate(125deg); }
+    66% { transform: translate(-65px, 85px) rotate(250deg); }
+}
+
+@keyframes floatLeaf14 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(-75px, 65px) rotate(-115deg); }
+    66% { transform: translate(55px, -75px) rotate(-230deg); }
+}
+
+@keyframes floatLeaf15 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(95px, 45px) rotate(135deg); }
+    66% { transform: translate(-55px, -95px) rotate(270deg); }
 }
 
 .container {
