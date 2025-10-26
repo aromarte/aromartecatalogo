@@ -124,7 +124,7 @@ function renderPerfumes(perfumes) {
 function createPerfumeCard(perfume, idx) {
     const categoryClass = perfume.categoria.toLowerCase();
     const categoryIcon = getCategoryIcon(perfume.categoria);
-    console.log(perfume.categoria);
+    
     const categoriaTitle = perfume.categoria === 'Presentacion' ? 'Presentación' : perfume.categoria;
     return `
         <div class="product-card" data-category="${perfume.categoria}" data-idx="${idx}">
