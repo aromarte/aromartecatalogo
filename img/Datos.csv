@@ -27,7 +27,7 @@ Dama,CHANG CHANEL #5,d-chanel5-n.png,d-chanel5-p.png,Chanel,Chanel #5
 Dama,PRIMERO 1 CK ONE (PRIMERA CALIDAD),d-ckone-n.png,d-ckone-p.png,Calvin Klein,CK One
 Dama,WOMAN C.K. CK WOMANES,d-ckwomen-n.png,d-ckwomen-p.png,Calvin Klein,CK Women
 Dama,CLO D-1 CLOUD,d-cloud-n.png,d-cloud-p.png,Ariana Grande,Cloud
-Dama,СОСА СОСO СHANEL TRADICIONAL,d-coco-n.png,d-coco-n.png,Chanel,Coco Chanel
+Dama,СОСА СОСO СHANEL TRADICIONAL,d-coco-n.png,d-coco-p.png,Chanel,Coco Chanel
 Dama,COLECCIÓN D-2 COCO MADEMOISELLE TRADICIONAL,d-cocomad-n.png,d-cocomad-p.png,Chanel,Coco Mademoiselle
 Dama,COOL WATT D COOL WATER,d-coolw-n.png,d-coolw-p.png,Davidoff,Cool Water
 Dama,AGUA CAR AGUA DE CARTIER/CARTIER UNISEX,c-cartier-n.png,c-cartier-p.png,Cartier ,Eau de Cartier
@@ -37,8 +37,8 @@ Dama,ETER D ETERNITY TRADICIONAL,d-eternity-n.png,d-eternity-p.png,Calvin Klein,
 Dama,FURIA D EUPHORIA,d-euphoria-n.png,d-euphoria-p.png,Calvin Klein,Euphoria
 Dama,FANTASY FANTASY,d-fantasy-n.png,d-fantasy-p.png,Brtiney Spears,Fantasy
 Dama,LACOSTE FEMME,d-femme-n.png,d-femme-p.png,Lacoste,Femme
-Dama,FLOR GARDENIA GUCCI FLORA GARDENIA,d-floragardenia-n.png,d-floragardenia-n.png,Gucci,Flora Gardenia
-Dama,DETY FLOR FLOWER BY KENZO,d-flowerkenzo-n.png,d-flowerkenzo-n.png,Kenzo,Flower
+Dama,FLOR GARDENIA GUCCI FLORA GARDENIA,d-floragardenia-n.png,d-floragardenia-p.png,Gucci,Flora Gardenia
+Dama,DETY FLOR FLOWER BY KENZO,d-flowerkenzo-n.png,d-flowerkenzo-p.png,Kenzo,Flower
 Dama,ZAPATILLA 1 GOOD GIRLS,d-goodgirl-n.png,d-goodgirl-p.png,Carolina Herrera,Good Girl
 Dama,ZAPATILLA 1 GOOD GIRLS BLUSH,d-goodgirlblush-n.png,d-goodgirlblush-p.png,Carolina Herrera,Good Girl Blush
 Dama,ALOWEN D HALLOWEEN,d-halloween-n.png,d-halloween-p.png,Jesus del Pozo,Halloween
@@ -51,7 +51,7 @@ Dama,La belle,d-labelle-n.png,d-labelle-p.png,Jean Paul Gaultier,La Belle
 Dama,LA VIDA LA VIE EST BELLE,d-laviebelle-n.png,d-laviebelle-p.png,Lancôme,La vie est belle
 Dama,MILLON D LADY MILLON,d-ladymillion-n.png,d-ladymillion-p.png,Paco Rabanne,Lady Million
 Dama,GAVAN AZUL D 1 LIGHT BLUE (1era.),d-lightblue-n.png,d-lightblue-p.png,Dolce & Gabbana,Light Blue
-Dama,MIAU 1 MEOW (PRIMERA CALIDAD),d-meow-n.png,d-meow-n.png,Katy Perry,Meow
+Dama,MIAU 1 MEOW (PRIMERA CALIDAD),d-meow-n.png,d-meow-p.png,Katy Perry,Meow
 Dama,MIRACLE,d-miracle-n.png,d-miracle-p.png,Lancôme,Miracle
 Dama,MISS DIOR TRADICONAL,d-misdior-n.png,d-misdior-p.png,Christian Dior,Miss Dior
 Dama,MON GUERLAIN,d-monguerlain-n.png,d-monguerlain-p.png,Guerlain,Mon Guerlain
@@ -70,7 +70,7 @@ Dama,PRADA CANDY,d-pradacandy-n.png,d-pradacandy-p.png,Prada,Prada Candy
 Dama,Purr ,d-purr-n.png,d-purr-p.png,Katy Perry,Purr
 Dama,Q Dolce G,d-q-n.png,d-q-p.png,Dolce & Gabbana,Q
 Dama,RACH RALPH LAUREN TRADICIONAL,d-ralph-n.png,d-ralph-p.png,Ralph Lauren,Ralph
-Dama,SCANDAL,d-scandal-n.png,d-scandal-n.png,Jean Paul Gaultier,Scandal
+Dama,SCANDAL,d-scandal-n.png,d-scandal-p.png,Jean Paul Gaultier,Scandal
 Dama,SEXY GRAFFITI,d-sexygraff-n.png,d-sexygraff-p.png,Escada,Sexy Graffiti
 Dama,SEÑORITA SIGNORINA,d-signotina-n.png,d-signotina-p.png,Salvatore Ferragamo,Signorina
 Dama,SWEET LOVE SWEET TOOTH MADE WITH LOVE (NUEVO),d-swwttooth-n.png,d-swwttooth-p.png,Sabrina Carpenter,Sweet Tooth
@@ -92,10 +92,10 @@ Caballero,ALU MASC ALLURE TRADICIONAL,c-allure-n.png,c-allure-p.png,Chanel,Allur
 Caballero,GAZZARO AZZARO TRADICIONAL,c-azzaro-n.png,c-azzaro-p.png,Azzaro,Azzaro Pour Homme
 Caballero,CARAT 1 BACCARAT ROUGE,c-baccarat-n.png,c-baccarat-p.png,Maison Francis Kurkdjian,Baccarat Rouge 540
 Caballero,BAD BOY LE PARFUM,c-badboy-n.png,c-badboy-p.png,Carolina Herrera,Bad Boy Le Parfum
-Caballero,BLEU,c-bleu-n.png,c-bleu-n.png,Chanel,Bleu de Chanel
+Caballero,BLEU,c-bleu-n.png,c-bleu-p.png,Chanel,Bleu de Chanel
 Caballero,BLUJINS BLUE JEANS,c-bluejeans-n.png,c-bluejeans-p.png,Versace,Blue Jeans
 Caballero,HUGO BOSS BOTTLE NIGHT,c-bottlednigth-n.png,c-bottlednigth-p.png,Hugo Boss,Bottled Night
-Caballero, BULGA MAN BULGARI MEN,c-bvlgari-n.png,c-bvlgari-n.png,Bvlgari,Bvlgari Pour Homme
+Caballero, BULGA MAN BULGARI MEN,c-bvlgari-n.png,c-bvlgari-p.png,Bvlgari,Bvlgari Pour Homme
 Caballero,CHROME,c-chrome-n.png,c-chrome-p.png,Azzaro,Chrome
 Caballero,CK BE,c-be-n.png,c-be-p.png,Calvin Klein,CK BE
 Caballero,PRIMERO 3 CK ONE (PRIMERA CALIDAD) UNISEX,d-ckone-n.png,d-ckone-p.png,Calvin Klein,CK One
@@ -105,7 +105,7 @@ Caballero,HACAR DRAKKAR NOIR,c-drakkar-n.png,c-drakkar-p.png,Guy Laroche,Drakkar
 Caballero,AGUA CAR AGUA DE CARTIER/CARTIER UNISEX,c-cartier-n.png,c-cartier-p.png,Cartier ,Eau de Cartier
 Caballero,EMPOR H EMPORIO ARMANI TRADICIONAL,c-emporio-n.png,c-emporio-p.png,Giorgio Armani,Emporio He
 Caballero,Eros,c-eros-n.png,c-eros-p.png,Versace,Eros
-Caballero,ETER MAS ETERNITY TRADICIONAL,c-eternity-n.png,c-eternity-n.png,Calvin Klein,Eternity For Men
+Caballero,ETER MAS ETERNITY TRADICIONAL,c-eternity-n.png,c-eternity-p.png,Calvin Klein,Eternity For Men
 Caballero,FAHRENHEIT-dior,c-farenheit-n.png,c-farenheit-p.png,Christian Dior,Farenheit
 Caballero,YIL FULL H DIESEL FUEL FOR LIFE,c-fuelforlife-n.png,c-fuelforlife-p.png,Diesel,Fuel For Life
 Caballero,GREY FLANNEL,c-greyflannel-n.png,c-greyflannel-p.png,Geoffrey Beene,Grey Flannel

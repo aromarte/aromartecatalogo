@@ -20,7 +20,7 @@ async function loadPerfumes() {
     try {
         showLoading(true);
         // Agregar versión para evitar caché
-        const version = '1.0.2';
+        const version = '1.0.3';
         const response = await fetch(`img/Datos.csv?v=${version}`);
         const csvText = await response.text();
         allPerfumes = parseCSV(csvText);
