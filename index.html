@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Catálogo de perfumes AromArte - Dama, Caballero y Ambientales">
     <title>AromArte - Catálogo de Perfumes</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.0.2">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <!--h1 class="logo">🌸 AromArte</h1-->
             <img src="img/resources/Logotipo.png" alt="AromArte Logo" class="logo">
         </div>
     </header>
@@ -25,16 +27,19 @@
             
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="todos">
-                    Todos <span class="count" id="count-todos">0</span>
+                    Todos <span class="count" id="count-todos" style="display: none;">0</span>
                 </button>
                 <button class="filter-btn" data-filter="Dama">
-                    👗 Dama <span class="count" id="count-dama">0</span>
+                    👗 Dama <span class="count" id="count-dama" style="display: none;">0</span>
                 </button>
                 <button class="filter-btn" data-filter="Caballero">
-                    🕴️ Caballero <span class="count" id="count-caballero">0</span>
+                    🕴️ Caballero <span class="count" id="count-caballero" style="display: none;">0</span>
                 </button>
                 <button class="filter-btn" data-filter="Ambiental">
-                    🌿 Ambiental <span class="count" id="count-ambiental">0</span>
+                    🌿 Ambiental <span class="count" id="count-ambiental" style="display: none;">0</span>
+                </button>
+                <button class="filter-btn" data-filter="Presentacion">
+                    ✨ Presentación <span class="count" id="count-presentacion" style="display: none;">0</span>
                 </button>
             </div>
         </div>
@@ -78,7 +83,7 @@
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="scripts.js?v=1.0.2"></script>
 </main>
 <!-- Modal para detalles de perfume (solo PC) -->
 <div id="perfumeModal" class="modal" style="display:none;">

@@ -19,7 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
 async function loadPerfumes() {
     try {
         showLoading(true);
-        const response = await fetch('img/Datos.csv');
+        // Agregar versión para evitar caché
+        const version = '1.0.2';
+        const response = await fetch(`img/Datos.csv?v=${version}`);
         const csvText = await response.text();
         allPerfumes = parseCSV(csvText);
         filteredPerfumes = [...allPerfumes];
@@ -57,8 +59,8 @@ function parseCSV(text) {
         }
     }
 
-    // Ordenar primero por categoria (Dama, Caballero, Ambiental), luego por perfume (alfabético)
-    const categoriaOrden = { Dama: 0, Caballero: 1, Ambiental: 2 };
+    // Ordenar primero por categoria (Dama, Caballero, Ambiental, Presentacion), luego por perfume (alfabético)
+    const categoriaOrden = { Dama: 0, Caballero: 1, Ambiental: 2, Presentacion: 3 };
     perfumes.sort((a, b) => {
         const catA = categoriaOrden[a.categoria] ?? 99;
         const catB = categoriaOrden[b.categoria] ?? 99;
@@ -122,10 +124,12 @@ function renderPerfumes(perfumes) {
 function createPerfumeCard(perfume, idx) {
     const categoryClass = perfume.categoria.toLowerCase();
     const categoryIcon = getCategoryIcon(perfume.categoria);
+    console.log(perfume.categoria);
+    const categoriaTitle = perfume.categoria === 'Presentacion' ? 'Presentación' : perfume.categoria;
     return `
         <div class="product-card" data-category="${perfume.categoria}" data-idx="${idx}">
             <div class="product-category ${categoryClass}">
-                ${categoryIcon} ${perfume.categoria}
+                ${categoryIcon} ${categoriaTitle}
             </div>
             <div class="product-images">
                 <img src="img/${perfume.envase}" 
@@ -196,8 +200,9 @@ function closePerfumeModal() {
 function getCategoryIcon(category) {
     const icons = {
         'Dama': '👗',
-        'Caballero': '🕴️',
-        'Ambiental': '🌿'
+        'Caballero': '🎩',
+        'Ambiental': '🌿',
+        'Presentacion': '✨'
     };
     return icons[category] || '✨';
 }
@@ -222,6 +227,17 @@ function setupEventListeners() {
     // Búsqueda
     const searchInput = document.getElementById('searchInput');
     searchInput.addEventListener('input', debounce(() => {
+        // Cambiar el filtro a "todos" cuando se escribe en el buscador
+        if (searchInput.value.trim() !== '') {
+            currentFilter = 'todos';
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-filter') === 'todos') {
+                    btn.classList.add('active');
+                }
+            });
+        }
         applyFilters();
     }, 300));
 }
@@ -251,13 +267,15 @@ function updateCounts() {
         todos: allPerfumes.length,
         Dama: allPerfumes.filter(p => p.categoria === 'Dama').length,
         Caballero: allPerfumes.filter(p => p.categoria === 'Caballero').length,
-        Ambiental: allPerfumes.filter(p => p.categoria === 'Ambiental').length
+        Ambiental: allPerfumes.filter(p => p.categoria === 'Ambiental').length,
+        Presentacion: allPerfumes.filter(p => p.categoria === 'Presentacion').length
     };
 
     document.getElementById('count-todos').textContent = counts.todos;
     document.getElementById('count-dama').textContent = counts.Dama;
     document.getElementById('count-caballero').textContent = counts.Caballero;
     document.getElementById('count-ambiental').textContent = counts.Ambiental;
+    document.getElementById('count-presentacion').textContent = counts.Presentacion;
 }
 
 // ========================================
