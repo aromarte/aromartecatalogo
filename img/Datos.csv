@@ -3,12 +3,13 @@ Dama,212AREA D-1,d-212-n.png,d-212-p.png,Carolina Herrera,212 Woman
 Dama,AREA ICE D 212 ON ICE WOMEN,d-212onice-n.png,d-212onice-p.png,Carolina Herrera,212 On Ice
 Dama,212 VIP ROSE,d-212rose-n.png,d-212rose-p.png,Carolina Herrera,212 VIP Rosé
 Dama,ELIZ CORAL 360 CORAL,d-360coral-n.png,d-360coral-p.png,Perry Ellis,360 Coral
+Dama,ELIZ CORAL 360,d-360-n.png,d-360-p.png,Perry Ellis,360
 Dama,RED D 360 RED,d-360red-n.png,d-360red-p.png,Perry Ellis,360 Red
 Dama,5TH AVENUE,d-5thave-n.png,d-5thave-p.png,Elizabeth Arden,5th Avenue
 Dama,9AM AFMAN ,d-9am-n.png,d-9am-p.png,Afnan,9AM
 Dama,A GIO D ACQUA DI GIO WOMAN,d-aquadio-n.png,d-aquadio-p.png,Giorgio Armani,Acqua di Gio
 Dama,AMORE D AMOR AMOR,d-amoramor-n.png,d-amoramor-p.png,CACHAREL,Amor Amor
-Dama,ANGE OU DEMON LE SECRET,d-angeoudemon-n.png,d-angeoudemon-p.png,Givenchy,Ange ou Demon
+Dama,ANGE OU DEMON LE SECRET,d-angeoudemonlesecret-n.png,d-angeoudemonlesecret-p.png,Givenchy,Ange ou Demon Le Secret
 Dama,ANY D ANIMALE,d-animale-n.png,d-animale-p.png,Animale,Animale
 Dama,POP DIVA D-2 ARI DE ARIANA GRANDE,d-ari-n.png,d-ari-p.png,Ariana Grande,Ari
 Dama,CARAT 1 BACCARAT ROUGE,c-baccarat-n.png,c-baccarat-p.png,Maison Francis Kurkdjian,Baccarat Rouge 540
@@ -16,7 +17,7 @@ Dama,BE DELICIOUS DKNY,d-bedelicious-n.png,d-bedelicious-p.png,Donna Karan (DKNY
 Dama,BEBE CHER BEBE SHEER BEBE,d-bebe-n.png,d-bebe-p.png,Sheer,Bebe
 Dama,BLACK OPIUM,d-blackopium-n.png,d-blackopium-p.png,Yves Saint Laurent,Black Opium
 Dama,BLACK ORCHID,d-blackorchid-n.png,d-blackorchid-p.png,Tom Ford,Black Orchid
-Dama,BOM WILL BOMBSHELL WILD FLOWER,d-bombshell-n.png,d-bombshell-p.png,Victoria's Secret,Bombshell
+Dama,BOM WILL BOMBSHELL WILD FLOWER,d-bombshellwildflower-n.png,d-bombshellwildflower-p.png,Victoria's Secret,Bombshell Wild Flower
 Dama,BON BON BONBON,d-bonbon-n.png,d-bonbon-p.png,Viktor & Rolf,Bon Bon
 Dama,BORN IN ROMA EXTRADOSE DONNA BY VALENTINO (NUEVO),d-borninromadonna-n.png,d-borninromadonna-p.png,Valentino,Born in Roma Extradose Donna
 Dama,BRIGHT CRYSTAL,d-brightcrystal-n.png,d-brightcrystal-p.png,Versace,Bright Crystal
@@ -42,6 +43,7 @@ Dama,DETY FLOR FLOWER BY KENZO,d-flowerkenzo-n.png,d-flowerkenzo-p.png,Kenzo,Flo
 Dama,ZAPATILLA 1 GOOD GIRLS,d-goodgirl-n.png,d-goodgirl-p.png,Carolina Herrera,Good Girl
 Dama,ZAPATILLA 1 GOOD GIRLS BLUSH,d-goodgirlblush-n.png,d-goodgirlblush-p.png,Carolina Herrera,Good Girl Blush
 Dama,ALOWEN D HALLOWEEN,d-halloween-n.png,d-halloween-p.png,Jesus del Pozo,Halloween
+Caballero,Halloween man,c-halloween-n.png,c-halloween-p.png,Jesus del Pozo,Halloween Man
 Dama,AIRE D HEIRESS,d-heiress-n.png,d-heiress-p.png,Paris Hilton,Hieress
 Dama,HUGO WOMAN CLASICO,d-hugowoman-n.png,d-hugowoman-p.png,Hugo Boss,Hugo Woman
 Dama,JADORE TRADICIONAL,d-jadore-n.png,d-jadore-p.png,Chanel,J'adore
@@ -71,7 +73,6 @@ Dama,Purr ,d-purr-n.png,d-purr-p.png,Katy Perry,Purr
 Dama,Q Dolce G,d-q-n.png,d-q-p.png,Dolce & Gabbana,Q
 Dama,RACH RALPH LAUREN TRADICIONAL,d-ralph-n.png,d-ralph-p.png,Ralph Lauren,Ralph
 Dama,SCANDAL,d-scandal-n.png,d-scandal-p.png,Jean Paul Gaultier,Scandal
-Dama,SEXY GRAFFITI,d-sexygraff-n.png,d-sexygraff-p.png,Escada,Sexy Graffiti
 Dama,SEÑORITA SIGNORINA,d-signotina-n.png,d-signotina-p.png,Salvatore Ferragamo,Signorina
 Dama,SWEET LOVE SWEET TOOTH MADE WITH LOVE (NUEVO),d-swwttooth-n.png,d-swwttooth-p.png,Sabrina Carpenter,Sweet Tooth
 Dama,THANK YOU NEXT,d-thank-n.png,d-thank-p.png,Ariana Grande,"Thank u, next"
@@ -81,8 +82,16 @@ Dama,TOY 2 BUBBLE GUM,d-toy2bumblegum-n.png,d-toy2bumblegum-p.png,Moschino,Toy 2
 Dama,TROPICAL TROPICAL PUNCH,d-tropicalpunch-n.png,d-tropicalpunch-p.png,Escada,Tropical Punch
 Dama,VIVA LA JUICY NOIR,d-vivalajuicy-n.png,d-vivalajuicy-p.png,Juicy Couture,Viva la Juicy
 Dama,YARA LATTAFA,d-yara-n.png,d-yara-p.png,Lattafa,Yara
+Dama,RIRI D RIHANNA,d-riri-n.png,d-riri-p.png,Rihanna,RiRi
+Dama,RED DOOR,d-reddoor-n.png,d-reddoor-p.png,Elizabeth Arden,Red Door
 Caballero,MILLON H-1 1 MILLON,c-1million-n.png,c-1million-p.png,Paco Rabanne,1 Million
+Caballero,Aventus,c-aventus-n.png,c-aventus-p.png,Creed,Aventus
+Caballero,Boss Pure,c-bosspure-n.png,c-bosspure-p.png,Hugo Boss,Boss Pure
+Caballero,Oscar de la Renta,c-oscardelarenta-n.png,c-oscardelarenta-p.png,Oscar De La Renta, Oscar For Men
+Caballero,Ultra male,c-ultramale-n.png,c-ultramale-p.png,Jean Paul Gaultier,Ultra Male
 Caballero,AREA H 212 MEN,c-212men-n.png,c-212men-p.png,Carolina Herrera,212 Men
+Caballero,212 SEXY MEN,d-212sexymen-n.png,d-212sexymen-p.png,Carolina Herrera,212 Sexy Men
+Caballero,Acqua di Gio Profumo,c-acquagioprofondo-n.png,c-acquagioprofondo-p.png,Giorgio Armani,Acqua di Gio Profondo
 Caballero,212 VIP Black,c-212vipblack-n.png,c-212vipblack-p.png,Carolina Herrera,212 VIP Black
 Caballero,212 VIP,c-212vip-n.png,c-212vip-p.png,Carolina Herrera,212 VIP Men
 Caballero,360 MEN,d-360him-n.png,d-360him-p.png,Perry Ellis,360° for Men
@@ -135,7 +144,6 @@ Caballero,TOMMY,c-tommy-n.png,c-tommy-p.png,Tommy Hilfiger,Tommy
 Caballero,TOY BOY,c-toyboy-n.png,c-toyboy-p.png,Moschino,Toy Boy
 Caballero,UOMO BORN IN ROMA ROCKSTUD NOIR,c-borninromarockstudio-n.png,c-borninromarockstudio-p.png,Valentino,Uomo Born In Roma Rockstud Noir
 Caballero,Y,c-y-n.png,c-y-p.png,Yves Saint Laurent (YSL),Y
-Ambiental,Bambu,a-bambu-n.png,a-bambu-p.png,Natural,Bambu
 Ambiental,Café,a-cafe-n.png,a-cafe-p.png,Natural,Café
 Ambiental,CHOCOLATE,u-chocolate-n.png,u-chocolate-p.png,Natural,Chocolate
 Ambiental,FRESA,u-fresa-n.png,u-fresa-p.png,Natural,Fresa
